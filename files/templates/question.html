@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>題目{{ques_number}}</title>
+    <style>
+        .btn{
+            width:60px;
+            height: 40px;
+            font-size: 15px;
+            background-color: rgb(68, 197, 68);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h4>
+            {{question}}
+        </h4>
+    </div>
+    <form action="https://68e5-61-227-235-200.ngrok-free.app/send_answer" method="POST">
+        <div>
+            <input type="hidden" name="id" value="{{id_num}}" style="width: 20px;" ><br>
+            <input type="radio" name="answer" value="A">{{A}}<br>
+            <input type="radio" name="answer" value="B">{{B}}<br>
+            <input type="radio" name="answer" value="C">{{C}}<br>
+            <input type="radio" name="answer" value="D">{{D}}<br>
+            <input type="submit" value="送出" class="btn">
+            <input type="reset" value="清除" class="btn" style="background-color: rgb(252, 113, 113);">
+        </div>
+    </form>
+</body>
+</html>
